@@ -1,0 +1,885 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <title>Dashboard Template</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="cssstyles.css" rel="stylesheet">
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel='stylesheet' href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="bootstrap/css/ion.rangeSliderHTML5.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body class="show_sidebar">
+    <div class="header">
+        <img class="logoStyle" src="logo-image-1.png">
+        <span class="nav_trigger">
+          <i class="glyphicon glyphicon-filter filterIconStyle"></i>
+        </span>
+        <div class="btn-group userAccountDetails" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle userButtonsStyles" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="userImagePhoto" src="circle-person.png"><sup class="userBatchStyle">4</sup> Viktor
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu dropdownMenuStyle">
+                <span class="glyphicon glyphicon-home newUserInfoStyleIcon" aria-hidden="true"></span>
+                <li><a href="#">Home</a></li>
+                <span class="glyphicon glyphicon-envelope newUserInfoStyleIcon" aria-hidden="true"></span>
+                <li><a href="#">Notifications</a></li>
+                <span class="glyphicon glyphicon-cog newUserInfoStyleIcon" aria-hidden="true"></span>
+                <li><a href="#">Settings</a></li>
+                <span class="glyphicon glyphicon-log-out newUserInfoStyleIcon" aria-hidden="true"></span>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="push_sidebar" class="filterStyle">
+            <div id="accordion">
+                <div class="filterHeaderStyle">
+                    <p>Filters</p>
+                </div>
+                <button class="accordion">Sports</button>
+                <div class="panel panelNewStyle">
+                    <form action="/action_page.php" method="get" class="filtersCheckboxesStyle filtersCheckboxesRightPadding">
+                        <input type="checkbox" name="vehicle" value="Bike" checked> First
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Second
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Bike"> Third
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Fourth
+                    </form>
+                    <form action="/action_page.php" method="get" class="filtersCheckboxesStyle">
+                        <input type="checkbox" name="vehicle" value="Bike"> Fifth
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Sixth
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Bike"> Seventh
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Eighth
+                    </form>
+                </div>
+                <button class="accordion">Sites</button>
+                <div class="panel panelNewStyle">
+                    <form action="/action_page.php" method="get" class="filtersCheckboxesStyle filtersCheckboxesRightPadding">
+                        <input type="checkbox" name="vehicle" value="Bike" checked> First
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Second
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Bike"> Third
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Fourth
+                    </form>
+                    <form action="/action_page.php" method="get" class="filtersCheckboxesStyle">
+                        <input type="checkbox" name="vehicle" value="Bike"> Fifth
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Sixth
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Bike"> Seventh
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Eighth
+                    </form>
+                </div>
+                <button class="accordion">Types</button>
+                <div class="panel panelNewStyle">
+                    <form action="/action_page.php" method="get" class="filtersCheckboxesStyle filtersCheckboxesRightPadding">
+                        <input type="checkbox" name="vehicle" value="Bike" checked> First
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Second
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Bike"> Third
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Fourth
+                    </form>
+                    <form action="/action_page.php" method="get" class="filtersCheckboxesStyle">
+                        <input type="checkbox" name="vehicle" value="Bike"> Fifth
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Sixth
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Bike"> Seventh
+                        <br>
+                        <input type="checkbox" name="vehicle" value="Car"> Eighth
+                    </form>
+                </div>
+                <button class="accordion">Stakes</button>
+                <div class="panel panelNewStyle">
+                    <div>
+                        <div>
+                            <input type="text" id="range" value="" name="range" />
+                        </div>
+                    </div>
+                </div>
+                <button class="accordion">Field Size</button>
+                <div class="panel panelNewStyle">
+                    <div>
+                        <div>
+                            <input type="text" id="range2" value="" name="range" />
+                        </div>
+                    </div>
+                </div>
+                <button class="accordion">Start Date</button>
+                <div class="panel panelNewStyle">
+                    <select class="form-control newFiltersInputStyle">
+                        <option selected="selected" value="volvo">yyyy</option>
+                        <option value="volvo">2017</option>
+                        <option value="volvo">2016</option>
+                        <option value="volvo">2015</option>
+                        <option value="volvo">2014</option>
+                        <option value="volvo">2013</option>
+                        <option value="volvo">2012</option>
+                        <option value="volvo">2011</option>
+                        <option value="volvo">2010</option>
+                        <option value="volvo">2009</option>
+                        <option value="volvo">2008</option>
+                        <option value="volvo">2007</option>
+                        <option value="volvo">2006</option>
+                    </select>
+                    <select class="form-control newFiltersInputStyle">
+                        <option selected="selected" value="volvo">mm</option>
+                        <option value="volvo">01</option>
+                        <option value="volvo">02</option>
+                        <option value="volvo">03</option>
+                        <option value="volvo">04</option>
+                        <option value="volvo">05</option>
+                        <option value="volvo">06</option>
+                        <option value="volvo">07</option>
+                        <option value="volvo">08</option>
+                        <option value="volvo">09</option>
+                        <option value="volvo">10</option>
+                        <option value="volvo">11</option>
+                        <option value="volvo">12</option>
+                    </select>
+                    <select class="form-control newFiltersInputStyle">
+                        <option selected="selected" value="volvo">dd</option>
+                        <option value="volvo">01</option>
+                        <option value="volvo">02</option>
+                        <option value="volvo">03</option>
+                        <option value="volvo">04</option>
+                        <option value="volvo">05</option>
+                        <option value="volvo">06</option>
+                        <option value="volvo">07</option>
+                        <option value="volvo">08</option>
+                        <option value="volvo">09</option>
+                        <option value="volvo">10</option>
+                        <option value="volvo">11</option>
+                        <option value="volvo">12</option>
+                        <option value="volvo">13</option>
+                        <option value="volvo">14</option>
+                        <option value="volvo">15</option>
+                        <option value="volvo">16</option>
+                        <option value="volvo">17</option>
+                        <option value="volvo">18</option>
+                        <option value="volvo">19</option>
+                        <option value="volvo">20</option>
+                        <option value="volvo">21</option>
+                        <option value="volvo">22</option>
+                        <option value="volvo">23</option>
+                        <option value="volvo">24</option>
+                        <option value="volvo">25</option>
+                        <option value="volvo">26</option>
+                        <option value="volvo">27</option>
+                        <option value="volvo">28</option>
+                        <option value="volvo">29</option>
+                        <option value="volvo">30</option>
+                        <option value="volvo">31</option>
+                    </select>
+                </div>
+                <button class="accordion">End Date</button>
+                <div class="panel panelNewStyle">
+                    <select class="form-control newFiltersInputStyle">
+                        <option selected="selected" value="volvo">yyyy</option>
+                        <option value="volvo">2017</option>
+                        <option value="volvo">2016</option>
+                        <option value="volvo">2015</option>
+                        <option value="volvo">2014</option>
+                        <option value="volvo">2013</option>
+                        <option value="volvo">2012</option>
+                        <option value="volvo">2011</option>
+                        <option value="volvo">2010</option>
+                        <option value="volvo">2009</option>
+                        <option value="volvo">2008</option>
+                        <option value="volvo">2007</option>
+                        <option value="volvo">2006</option>
+                    </select>
+                    <select class="form-control newFiltersInputStyle">
+                        <option selected="selected" value="volvo">mm</option>
+                        <option value="volvo">01</option>
+                        <option value="volvo">02</option>
+                        <option value="volvo">03</option>
+                        <option value="volvo">04</option>
+                        <option value="volvo">05</option>
+                        <option value="volvo">06</option>
+                        <option value="volvo">07</option>
+                        <option value="volvo">08</option>
+                        <option value="volvo">09</option>
+                        <option value="volvo">10</option>
+                        <option value="volvo">11</option>
+                        <option value="volvo">12</option>
+                    </select>
+                    <select class="form-control newFiltersInputStyle">
+                        <option selected="selected" value="volvo">dd</option>
+                        <option value="volvo">01</option>
+                        <option value="volvo">02</option>
+                        <option value="volvo">03</option>
+                        <option value="volvo">04</option>
+                        <option value="volvo">05</option>
+                        <option value="volvo">06</option>
+                        <option value="volvo">07</option>
+                        <option value="volvo">08</option>
+                        <option value="volvo">09</option>
+                        <option value="volvo">10</option>
+                        <option value="volvo">11</option>
+                        <option value="volvo">12</option>
+                        <option value="volvo">13</option>
+                        <option value="volvo">14</option>
+                        <option value="volvo">15</option>
+                        <option value="volvo">16</option>
+                        <option value="volvo">17</option>
+                        <option value="volvo">18</option>
+                        <option value="volvo">19</option>
+                        <option value="volvo">20</option>
+                        <option value="volvo">21</option>
+                        <option value="volvo">22</option>
+                        <option value="volvo">23</option>
+                        <option value="volvo">24</option>
+                        <option value="volvo">25</option>
+                        <option value="volvo">26</option>
+                        <option value="volvo">27</option>
+                        <option value="volvo">28</option>
+                        <option value="volvo">29</option>
+                        <option value="volvo">30</option>
+                        <option value="volvo">31</option>
+                    </select>
+                </div>
+                <div class="filterFooterStyle">
+                    <button type="button" class="btn btn-primary btn-lg btn-block filterButtonsNewStyle">Filter</button>
+                </div>
+            </div>
+        </div>
+        <div class="filterResultsStyle">
+            <div id="exTab1">
+                <ul class="nav nav-pills tabBorderTopNewStyleDiagram">
+                    <li class="active col-md-2 newTabDataDiagramStyle">
+                        <a class="noBorderRadiusStyle4" href="#1a" data-toggle="tab">Games</a>
+                    </li>
+                    <li class="col-md-2 newTabDataDiagramStyle">
+                        <a class="noBorderRadiusStyle" href="#2a" data-toggle="tab">Stakes</a>
+                    </li>
+                    <li class="col-md-2 newTabDataDiagramStyle">
+                        <a class="noBorderRadiusStyle" href="#3a" data-toggle="tab">Score</a>
+                    </li>
+                    <li class="col-md-2 newTabDataDiagramStyle">
+                        <a class="noBorderRadiusStyle" href="#4a" data-toggle="tab">Entered</a>
+                    </li>
+                    <li class="col-md-2 newTabDataDiagramStyle">
+                        <a class="noBorderRadiusStyle" href="#5a" data-toggle="tab">Won</a>
+                    </li>
+                    <li class="col-md-2 newTabDataDiagramStyle noBorderDigramStyle">
+                        <a class="noBorderRadiusStyle" href="#6a" data-toggle="tab">Profit</a>
+                    </li>
+                </ul>
+                <div class="totalDataDiagramStyles">
+                    <span class="col-md-2 totalItemDiagramStyle">45334<br><span class="subTotalItemStyle">23.54%</span></span>
+                    <span class="col-md-2 totalItemDiagramStyle">$4.45</span>
+                    <span class="col-md-2 totalItemDiagramStyle">254.39</span>
+                    <span class="col-md-2 totalItemDiagramStyle">$145,454,00</span>
+                    <span class="col-md-2 totalItemDiagramStyle">$435,454,56</span>
+                    <span class="col-md-2 totalItemDiagramStyle">$343,545,05<br><span class="subTotalItemStyle">23,45%</span></span>
+                </div>
+                <div class="tab-content clearfix">
+                    <div class="tab-pane active" id="1a">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="tab-pane" id="2a">
+                        <canvas id="myChart2"></canvas>
+                    </div>
+                    <div class="tab-pane" id="3a">
+                        <canvas id="myChart3"></canvas>
+                    </div>
+                    <div class="tab-pane" id="4a">
+                        <canvas id="myChart4"></canvas>
+                    </div>
+                    <div class="tab-pane" id="5a">
+                        <canvas id="myChart5"></canvas>
+                    </div>
+                    <div class="tab-pane" id="6a">
+                        <canvas id="myChart6"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="filterResultsStyle">
+            <div id="exTab1">
+                <ul class="nav nav-pills tabBorderTopNewStyleDiagram dataTableNewStyle">
+                    <li class="active col-md-3 newTabDataDiagramStyle dataTableNewStyleTab noBorderDataStyle">
+                        <a href="#7a" data-toggle="tab">Results by Stakes</a>
+                    </li>
+                    <li class="col-md-3 newTabDataDiagramStyle dataTableNewStyleTab noBorderDataStyle">
+                        <a href="#8a" data-toggle="tab">Tickets Results</a>
+                    </li>
+                </ul>
+                <div class="tab-content clearfix newInfoTableStyle">
+                    <div class="tab-pane active" id="7a">
+                        <table class="table table-striped newMainTableStyle">
+                            <thead>
+                                <tr>
+                                    <th class="active tableHeadingNewStyle">Stakes</th>
+                                    <th class="active tableHeadingNewStyle">Entered</th>
+                                    <th class="active tableHeadingNewStyle">Won</th>
+                                    <th class="active tableHeadingNewStyle">ROI</th>
+                                    <th class="active tableHeadingNewStyle">Games</th>
+                                    <th class="active tableHeadingNewStyle">Average Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">2062.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="active tableContentNewStyle1">20/37</td>
+                                    <td class="active tableContentNewStyle1">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.445</td>
+                                    <td class="success tableContentNewStyle2">0.43</td>
+                                    <td class="success tableContentNewStyle2">2343.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">6,43%</td>
+                                    <td class="active tableContentNewStyle2">20/37</td>
+                                    <td class="success tableContentNewStyle2">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">4.54</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">2062.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="active tableContentNewStyle1">20/37</td>
+                                    <td class="active tableContentNewStyle1">45.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">2062.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="success tableContentNewStyle2">20/37</td>
+                                    <td class="success tableContentNewStyle2">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">2062.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleRed">-50,45%</td>
+                                    <td class="active tableContentNewStyle1">20/37</td>
+                                    <td class="active tableContentNewStyle1">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.78</td>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">2062.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">45,34%</td>
+                                    <td class="success tableContentNewStyle2">20/37</td>
+                                    <td class="success tableContentNewStyle2">218.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">3.65</td>
+                                    <td class="active tableContentNewStyle1">5462.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="active tableContentNewStyle1">20/37</td>
+                                    <td class="active tableContentNewStyle1">256.45</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">2062.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="success tableContentNewStyle2">3434/343</td>
+                                    <td class="success tableContentNewStyle2">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">2062.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="active tableContentNewStyle1">123/7</td>
+                                    <td class="active tableContentNewStyle1">1446.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">2062.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleRed">-34,45%</td>
+                                    <td class="success tableContentNewStyle2">20/37</td>
+                                    <td class="success tableContentNewStyle2">2123.57</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">43.00</td>
+                                    <td class="active tableContentNewStyle1">2062.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="active tableContentNewStyle1">20/37</td>
+                                    <td class="active tableContentNewStyle1">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">0.434</td>
+                                    <td class="success tableContentNewStyle2">454.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="success tableContentNewStyle2">20/37</td>
+                                    <td class="success tableContentNewStyle2">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">2062.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">34,45%</td>
+                                    <td class="active tableContentNewStyle1">20/37</td>
+                                    <td class="active tableContentNewStyle1">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">432.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="success tableContentNewStyle2">43/3434</td>
+                                    <td class="success tableContentNewStyle2">546.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">2062.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="active tableContentNewStyle1">224/434</td>
+                                    <td class="active tableContentNewStyle1">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">4.543</td>
+                                    <td class="success tableContentNewStyle2">5.665</td>
+                                    <td class="success tableContentNewStyle2">545.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleRed">-453,23%</td>
+                                    <td class="success tableContentNewStyle2">20/37</td>
+                                    <td class="success tableContentNewStyle2">334.51</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-pane" id="8a">
+                        <table class="table table-striped newMainTableStyle">
+                            <thead>
+                                <tr>
+                                    <th class="active tableHeadingNewStyle">Stakes</th>
+                                    <th class="active tableHeadingNewStyle">Entered</th>
+                                    <th class="active tableHeadingNewStyle">Won</th>
+                                    <th class="active tableHeadingNewStyle">ROI</th>
+                                    <th class="active tableHeadingNewStyle">Games</th>
+                                    <th class="active tableHeadingNewStyle">Average Score</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.56</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">256.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleRed">-34,34%</td>
+                                    <td class="active tableContentNewStyle1">20/5455</td>
+                                    <td class="active tableContentNewStyle1">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.445</td>
+                                    <td class="success tableContentNewStyle2">0.43</td>
+                                    <td class="success tableContentNewStyle2">235.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleRed">-6,43%</td>
+                                    <td class="active tableContentNewStyle2">20/37</td>
+                                    <td class="success tableContentNewStyle2">13.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">4.54</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">20.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">34,78%</td>
+                                    <td class="active tableContentNewStyle1">323/37</td>
+                                    <td class="active tableContentNewStyle1">12.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.34</td>
+                                    <td class="success tableContentNewStyle2">0.454</td>
+                                    <td class="success tableContentNewStyle2">342.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="success tableContentNewStyle2">2323/37</td>
+                                    <td class="success tableContentNewStyle2">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">454.00</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">2045.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleRed">-50,45%</td>
+                                    <td class="active tableContentNewStyle1">454/37</td>
+                                    <td class="active tableContentNewStyle1">145.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.78</td>
+                                    <td class="success tableContentNewStyle2">454.343</td>
+                                    <td class="success tableContentNewStyle2">2062.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">45,34%</td>
+                                    <td class="success tableContentNewStyle2">20/435</td>
+                                    <td class="success tableContentNewStyle2">234.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">23.65</td>
+                                    <td class="active tableContentNewStyle1">5454.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleRed">-45,34%</td>
+                                    <td class="active tableContentNewStyle1">34/37</td>
+                                    <td class="active tableContentNewStyle1">245.45</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.34</td>
+                                    <td class="success tableContentNewStyle2">0.454</td>
+                                    <td class="success tableContentNewStyle2">2432.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="success tableContentNewStyle2">3434/343</td>
+                                    <td class="success tableContentNewStyle2">1445.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">204.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="active tableContentNewStyle1">123/7</td>
+                                    <td class="active tableContentNewStyle1">144.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">3.00</td>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">2062.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleRed">-34,45%</td>
+                                    <td class="success tableContentNewStyle2">20/37</td>
+                                    <td class="success tableContentNewStyle2">2123.57</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.334</td>
+                                    <td class="active tableContentNewStyle1">43.00</td>
+                                    <td class="active tableContentNewStyle1">2052.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">325,34%</td>
+                                    <td class="active tableContentNewStyle1">20/37</td>
+                                    <td class="active tableContentNewStyle1">145.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">0.434</td>
+                                    <td class="success tableContentNewStyle2">44.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="success tableContentNewStyle2">20/37</td>
+                                    <td class="success tableContentNewStyle2">14443.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">2062.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">34,45%</td>
+                                    <td class="active tableContentNewStyle1">20/37</td>
+                                    <td class="active tableContentNewStyle1">186445.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2">0.04440</td>
+                                    <td class="success tableContentNewStyle2">0.00</td>
+                                    <td class="success tableContentNewStyle2">43452.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleRed">-45,23$</td>
+                                    <td class="success tableContentNewStyle2">43/3434</td>
+                                    <td class="success tableContentNewStyle2">546.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="active tableContentNewStyle1">0.0440</td>
+                                    <td class="active tableContentNewStyle1">0.00</td>
+                                    <td class="active tableContentNewStyle1">20462.00</td>
+                                    <td class="active tableContentNewStyle1 colorfulColumnStyleGreen">Infinite</td>
+                                    <td class="active tableContentNewStyle1">224/434</td>
+                                    <td class="active tableContentNewStyle1">186.51</td>
+                                </tr>
+                                <tr>
+                                    <td class="success tableContentNewStyle2 borderRadiusStyle">4.543</td>
+                                    <td class="success tableContentNewStyle2">5.6465</td>
+                                    <td class="success tableContentNewStyle2">5445.00</td>
+                                    <td class="success tableContentNewStyle2 colorfulColumnStyleRed">-453,23%</td>
+                                    <td class="success tableContentNewStyle2">204443/337</td>
+                                    <td class="success tableContentNewStyle2">33344.51</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="bootstrap/js/ion.rangeSlider.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script>
+    $(".nav_trigger").click(function() {
+
+        $("body").toggleClass("show_sidebar");
+
+        $(".nav_trigger .fa").toggleClass("fa-navicon fa-times");
+
+    });
+
+
+
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].onclick = function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        }
+    }
+
+
+
+    $(function() {
+
+        $("#range").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: 0,
+            max: 20,
+            from: 0,
+            to: 5,
+            prefix: ""
+        });
+    });
+
+
+
+
+
+    $(function() {
+
+        $("#range2").ionRangeSlider({
+            type: "double",
+            grid: true,
+            min: 2,
+            max: 171750,
+            from: 0,
+            to: 70000,
+            prefix: ""
+        });
+    });
+
+
+
+
+    var years = ["Jan 2014", "Apr", "Jul", "Oct", "Jan 2015", "Apr", "May", "June", "July", "Aug"];
+    var game1 = [86, 114, 106, 3434, 3900, 4565, 4787, 5656, 5788, 5888];
+    var game2 = [800, 1200, 2656, 2787, 2987, 3232, 3454, 3656, 4555, 4777];
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [{
+                    data: game1,
+                    label: "Game 1",
+                    borderColor: "#bcbcbc",
+                    fill: false
+
+                },
+
+                {
+                    data: game2,
+                    label: "Game 2",
+                    borderColor: "#d80044",
+                    fill: false
+                }
+
+
+            ]
+        }
+    });
+
+
+
+
+
+
+    var years = ["Jan 2014", "Apr", "Jul", "Oct", "Jan 2015", "Apr", "May", "June", "July", "Aug"];
+    var stake1 = [86, 114, 565, 1000, 1234, 3434, 3787, 5888, 5995, 5997];
+    var stake2 = [800, 900, 1343, 1676, 3544, 3676, 3989, 4545, 4676, 5212];
+    var stake3 = [168, 170, 178, 1222, 1666, 2323, 3233, 3454, 3565, 3777];
+    var ctx = document.getElementById("myChart2");
+    var myChart2 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [{
+                    data: stake1,
+                    label: "Stake 1",
+                    borderColor: "#bcbcbc",
+                    fill: false
+
+                },
+
+                {
+                    data: stake2,
+                    label: "Stake 2",
+                    borderColor: "#d80044",
+                    fill: false
+                },
+
+
+                {
+                    data: stake3,
+                    label: "Stake 3",
+                    borderColor: "#ec7c9f",
+                    fill: false
+                }
+
+
+            ]
+        }
+    });
+
+
+
+    var years = ["Jan 2014", "Apr", "Jul", "Oct", "Jan 2015", "Apr", "May", "June", "July", "Aug"];
+    var score1 = [86, 114, 3434, 3676, 4565, 4999, 5333, 5454, 5787, 5999];
+    var score2 = [800, 1232, 2345, 3433, 3544, 3878, 4555, 5656, 5767, 5888];
+    var ctx = document.getElementById("myChart3");
+    var myChart3 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [{
+                    data: score1,
+                    label: "Score 1",
+                    borderColor: "#bcbcbc",
+                    fill: false
+
+                },
+
+                {
+                    data: score2,
+                    label: "Score 2",
+                    borderColor: "#d80044",
+                    fill: false
+                }
+
+
+            ]
+        }
+    });
+
+
+
+
+    var years = ["Jan 2014", "Apr", "Jul", "Oct", "Jan 2015", "Apr", "May", "June", "July", "Aug"];
+    var entered1 = [86, 100, 106, 2343, 3444, 3566, 4555, 4656, 5666, 5777];
+    var entered2 = [800, 945, 1234, 1265, 1454, 1567, 1678, 1765, 1876, 1967];
+    var ctx = document.getElementById("myChart4");
+    var myChart4 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [{
+                    data: entered1,
+                    label: "Entered 1",
+                    borderColor: "#bcbcbc",
+                    fill: false
+
+                },
+
+                {
+                    data: entered2,
+                    label: "Entered 2",
+                    borderColor: "#d80044",
+                    fill: false
+                }
+
+
+            ]
+        }
+    });
+
+
+
+
+
+    var years = ["Jan 2014", "Apr", "Jul", "Oct", "Jan 2015", "Apr", "May", "June", "July", "Aug"];
+    var won1 = [109, 114, 145, 298, 324, 387, 456, 546, 598, 676];
+    var won2 = [1545, 1875, 2345, 2788, 3245, 3787, 4356, 4678, 4897, 5456];
+    var ctx = document.getElementById("myChart5");
+    var myChart5 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [{
+                    data: won1,
+                    label: "Won 1",
+                    borderColor: "#bcbcbc",
+                    fill: false
+
+                },
+
+                {
+                    data: won2,
+                    label: "Won 2",
+                    borderColor: "#d80044",
+                    fill: false
+                }
+
+
+            ]
+        }
+    });
+
+
+    var years = ["Jan 2014", "Apr", "Jul", "Oct", "Jan 2015", "Apr", "May", "June", "July", "Aug"];
+    var profit1 = [86, 114, 176, 545, 1234, 1545, 3434, 3876, 4565, 4898];
+    var profit2 = [54, 350, 456, 1000, 1564, 2343, 3456, 4345, 4678, 5267];
+    var ctx = document.getElementById("myChart6");
+    var myChart6 = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [{
+                    data: profit1,
+                    label: "Profit 1",
+                    borderColor: "#bcbcbc",
+                    fill: false
+
+                },
+
+                {
+                    data: profit2,
+                    label: "Profit 2",
+                    borderColor: "#d80044",
+                    fill: false
+                }
+
+
+            ]
+        }
+    });
+    </script>
+</body>
+
+</html>
